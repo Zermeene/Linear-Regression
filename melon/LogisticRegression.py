@@ -12,7 +12,7 @@ class LogisticRegressor:
 
     def classify(_self):
         x=st.multiselect('Select Features (X):',_self.columns,key='logistic_x')
-        y=st.selectbox('Select Target (MUST BE BINART):',_self.columns,key='logistic_y')
+        y=st.selectbox('Select Target (MUST BE BINARY):',_self.columns,key='logistic_y')
 
         if st.button('Run Logistic Regression'):
             if x and y:

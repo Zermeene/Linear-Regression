@@ -33,8 +33,8 @@ class Loader:
         if _self.no_label:
             df=pd.read_csv(uploaded_file,sep=_self.separator,header=None)
 
-            st.write("Original loaded data:")
-            st.dataframe(df.head())
+            # st.write("Original loaded data:")
+            # st.dataframe(df.head())
             st.markdown('Loader.py')
             
             df=df.select_dtypes(include=['number']) #,exclude=['']
@@ -43,16 +43,15 @@ class Loader:
             return df
         else:
             df=pd.read_csv(uploaded_file,sep=_self.separator,header=0)
-            st.markdown('Loader.py')
-            st.write("Original loaded data:")
-            st.dataframe(df.head(5))
+            # st.markdown('Loader.py')
+            # st.write("Original loaded data:")
+            # st.dataframe(df.head(5))
 
             df.dropna(inplace=True)
             lowercase=lambda x: str(x).lower()
             df.rename(columns=lowercase,inplace=True)#axis=1-> columns,0->row
 
             df=df.select_dtypes(include=['number'])
-            st.markdown('Loader.py')
-            st.write("Numeric data:")
+            # st.markdown('Loader.py')
+            # st.write("Numeric data:")
             return df
-

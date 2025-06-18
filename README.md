@@ -3,7 +3,7 @@ Streamlit Regression Dashboard:
 An interactive Streamlit app that allows users to upload datasets, explore them visually and
 statistically, and perform linear regression analysis — all without writing any code.
 Built with modularity, usability, and data science workflows in mind.
-🚀 **Live App**: [Click here to open]([https://linear-regressiongit-ktbzbbc5vsymeansjrtvy6.streamlit.app/](https://linear-regression-zwaz7u6zfpvt7hv3exuhxw.streamlit.app/))
+🚀 **Live App**: [Click here to open](https://linear-regression-zwaz7u6zfpvt7hv3exuhxw.streamlit.app/)
 
 
 Features:

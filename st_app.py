@@ -3,6 +3,8 @@ from melon.Loader import Loader
 from melon.Evaluator import Evaluator
 from melon.GraphicGenerator import GrapghicGenerator
 from melon.LinearRegressor import LinearRregressor
+from melon.LogisticRegression import LogisticRegressor
+
 #streamlit run st_app.py
 
 st.header('Linear Regressor')
@@ -23,6 +25,7 @@ if Uploaded_file is not None:
     st.header('Data Evaluation')
     st.write('Non-numeric columns and rows with missing values have been dropped.')
     data_evaluator = Evaluator(df)
+    data_evaluator.show_head()
     data_evaluator.show_dimensions()
     data_evaluator.show_columns()
 
@@ -52,3 +55,8 @@ if Uploaded_file is not None:
     data_linear_reg=LinearRregressor(df)
     data_linear_reg.Linear()
     st.markdown('<hr/>',unsafe_allow_html=True)
+
+    #LogisticRgressor.py
+    st.header('Logistic Regression')
+    logistic = LogisticRegressor(df)
+    logistic.classify()
